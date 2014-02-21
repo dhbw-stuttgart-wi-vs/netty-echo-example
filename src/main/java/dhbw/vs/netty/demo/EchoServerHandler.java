@@ -28,8 +28,8 @@ public class EchoServerHandler extends ChannelInboundHandlerAdapter {
 		ctx.write(msg);
 
 		// Disconnect and shut the server down
-		// ctx.disconnect();
-		// eventLoopGroup.shutdownGracefully();
+		ctx.disconnect();
+		eventLoopGroup.shutdownGracefully();
 	}
 
 }

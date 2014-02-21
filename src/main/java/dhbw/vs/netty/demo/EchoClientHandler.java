@@ -22,11 +22,6 @@ public class EchoClientHandler extends ChannelInboundHandlerAdapter {
 	}
 
 	@Override
-    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        log.debug("Received: {}", ((ByteBuf)msg).toString(Charset.defaultCharset()));
-    }
-	
-	@Override
 	public void channelInactive(ChannelHandlerContext ctx) throws Exception {
 		log.debug("Channel disconnected");
 		ctx.close();
